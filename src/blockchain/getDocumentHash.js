@@ -9,7 +9,7 @@ const nodeUrl = node
 const provider = ethers.getDefaultProvider(nodeUrl)
 
 const wallet = new ethers.Wallet(privateKey, provider)
-const contractABI = getABI("src/blockchain/BookHashStorage.sol")
+const contractABI = getABI("src/blockchain/smart-contract/BookHashStorage.sol")
 const contract = new ethers.Contract(contractAddress, contractABI, wallet)
 
 async function getDocumentHash(transactionCode) {
