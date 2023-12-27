@@ -2,6 +2,16 @@
 pragma solidity ^0.8.0;
 
 contract BookHashStorage {
+  // Owner only restriction
+  // address private owner; // The address of the allowed user
+  // modifier onlyOwner() {
+  //   require(msg.sender == owner, "Only the owner can call this function");
+  //   _;
+  // }
+  // constructor() {
+  //   owner = msg.sender; // Set the contract deployer as the owner
+  // }
+
   mapping(string => string) private bookHashes;
 
   function storeBookHash(string memory transactionCode, string memory bookHash) external {
