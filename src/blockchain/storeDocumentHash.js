@@ -21,10 +21,11 @@ async function storeDocumentHash(transactionCode, documentHash) {
     return contractTransacitonReceipt
   } catch (error) {
     if (error && error.info && error.info.error) {
-      console.error("Smart contract call failed:", error.info.error.message)
+      // console.error("Smart contract call failed:", error.info.error.message)
+      return `Smart contract call failed:, ${error.info.error.message}`
     } else {
-      // Handle other types of errors
-      console.error("An unexpected error occurred:", error)
+      // console.error("An unexpected error occurred:", error)
+      return `An unexpected error occurred: ${error}`
     }
   }
 }
