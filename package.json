@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "func host start --inspect",
-    "test": "echo \"No tests yet...\""
+    "test": "jest"
   },
   "dependencies": {
     "@azure/functions": "^4.0.0",
@@ -17,5 +17,8 @@
     "uuid": "^9.0.1",
     "web3": "^4.3.0"
   },
-  "main": "src/functions/*.js"
+  "main": "src/functions/*.js",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
