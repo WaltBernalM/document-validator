@@ -37,10 +37,16 @@ app.http("bkch-doc-entry", {
       /* Blockchain Interaction */
       /****************************************************************************************************************/
       const documentHash = await getDocumentHash(transactionId)
+      const timestamp = transactionId.slice(0, transactionId.indexOf("Z") + 1)
 
       const response = {
-        transactionId: transactionId,
-        documentHash: documentHash
+        entry: {
+          contents: {
+            documentHash,
+            timestamp
+          },
+          transactionId
+        }
       }
 
       return {
