@@ -41,7 +41,7 @@ app.http("bkch-doc", {
 
       const response = {
         receipt: transactionReceipt,
-        transacitonId: UUID,
+        transactionId: UUID,
       }
 
       return {
