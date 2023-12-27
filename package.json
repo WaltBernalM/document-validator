@@ -7,8 +7,12 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "@azure/functions": "^4.0.0"
+    "@azure/functions": "^4.0.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.1",
+    "fs": "^0.0.1-security",
+    "solc": "^0.8.23-fixed",
+    "uuid": "^9.0.1"
   },
-  "devDependencies": {},
   "main": "src/functions/*.js"
 }
