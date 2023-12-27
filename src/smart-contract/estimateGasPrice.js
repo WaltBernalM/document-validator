@@ -1,18 +1,12 @@
 const axios = require("axios")
-const { node } = require("../constants.js")
+const { node } = require("./constants")
 
-const estimateGas = async () => {
-  const method = "eth_estimateGas"
+const estimateGasPrice = async () => {
+  const method = "eth_gasPrice"
   const postData = {
     jsonrpc: "2.0",
     method: method,
-    params: [
-      {
-        from: "0x949B38745913D3f5EE021295aA56Dc1F0F17EE9f",
-        to: null,
-        value: "0x0",
-      },
-    ],
+    params: [],
     id: "getblock.io",
   }
   try {
@@ -25,4 +19,4 @@ const estimateGas = async () => {
   }
 }
 
-module.exports = estimateGas
+module.exports = estimateGasPrice

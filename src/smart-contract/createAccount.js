@@ -1,5 +1,5 @@
 const Web3 = require("web3")
-const { node } = require("../constants")
+const { node } = require("./constants")
 
 const web3 = new Web3(node)
 

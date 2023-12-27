@@ -1,6 +1,6 @@
 const fs = require("fs")
 const getNonce = require("./getNonce")
-const { privateKey: privateKeyString } = require("../constants.js")
+const { privateKey: privateKeyString } = require("./constants")
 const estimateGas = require("./estimateGas")
 const estimateGasPrice = require("./estimateGasPrice")
 const EthereumTx = require("ethereumjs-tx").Transaction

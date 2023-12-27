@@ -1,7 +1,7 @@
 const Web3 = require("web3")
 const axios = require("axios")
 const getContractRawTx = require("./getContractRawTx")
-const { node } = require("..constants")
+const { node } = require("./constants")
 const estimateGas = require("./estimateGas")
 const gasPrice = require("./estimateGasPrice")
 

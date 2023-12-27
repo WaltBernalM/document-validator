@@ -1,5 +1,5 @@
 const axios = require("axios")
-const { address, node } = require("../constants.js")
+const { address, node } = require("./constants")
 
 module.exports = getNonce = async () => {
   const method = "eth_getTransactionCount"
