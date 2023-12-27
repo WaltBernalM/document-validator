@@ -20,8 +20,8 @@ const getTxReceiptByTxHash  = async (transactionHash) => {
   }
 }
 
-getTxReceiptByTxHash(
-  "0x2824d2ee61f6eae0cc1a26d9e96b21cad1750f52db49a1a0824cef28af831272"
-)
+// getTxReceiptByTxHash(
+//   "0x2824d2ee61f6eae0cc1a26d9e96b21cad1750f52db49a1a0824cef28af831272"
+// )
 
 module.exports = getTxReceiptByTxHash
