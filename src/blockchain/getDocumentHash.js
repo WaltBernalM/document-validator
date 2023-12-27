@@ -15,15 +15,15 @@ const contract = new ethers.Contract(contractAddress, contractABI, wallet)
 async function getDocumentHash(transactionCode) {
   try {
     const documentHash = await contract.getBookHash(transactionCode)
-    console.log("Retrieved Document Hash:", documentHash)
+    // console.log("Retrieved Document Hash:", documentHash)
     return documentHash
   } catch (error) {
     if (error && error.info && error.info.error) {
       // console.error("Smart contract call failed:", error.info.error.message)
-      return `Smart contract call failed:, ${error.info.error.message}`
+      throw new Error(`Smart contract call failed:, ${error.info.error.message}`)
     } else {
       // console.error("An unexpected error occurred:", error)
-      return `An unexpected error occurred: ${error}`
+      throw new Error(`An unexpected error occurred: ${error}`)
     }
   }
 }

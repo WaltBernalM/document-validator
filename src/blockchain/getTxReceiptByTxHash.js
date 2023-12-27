@@ -13,10 +13,11 @@ const getTxReceiptByTxHash  = async (transactionHash) => {
     const response = await axios.post(`${node}`, postData, {
       headers: { "Content-Type": "application/json" },
     })
-    console.log(response.data.result)
+    // console.log(response.data.result)
     return response.data.result
   } catch (error) {
-    console.log(error.message)
+    // console.log(error.message)
+    throw new Error(error.message)
   }
 }
 
